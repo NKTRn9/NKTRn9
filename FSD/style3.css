@@ -1,0 +1,10 @@
+ol i
+{
+color: blue;
+font-size: 20px;
+}
+ol>i
+{
+    color: red;
+    font-size: x-small;
+}

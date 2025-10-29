@@ -1,0 +1,13 @@
+input[type="text"]
+{
+    width: 150px;
+    margin-bottom: 10px;
+    background-color: lightblue;
+}
+
+input[type="button"]
+{
+    width: 120px;
+    margin-left: 35px;
+    background-color: yellow;
+}
