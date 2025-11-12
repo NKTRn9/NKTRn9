@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .img{
+            max-width: 100%;
+            height: auto;
+        }
+        /* css gradient 1.linear ,2.radial ,3.conic*/
+        /*1.linear gradient*/
+        .grad{
+            background-image: linear-gradient(pink,blue);
+            height: 500px;
+            width: 800px;  
+        }
+        .grad1{
+            background-image: linear-gradient(to left,yellow,red);
+            height: 500px;
+            width: 800px;  
+        }
+        .grad2{
+            background-image: linear-gradient(to bottom right,red,yellow);
+            height: 500px;
+            width: 800px;  
+        }
+       /*using angle*/
+       .ang{
+        background-image: linear-gradient(90deg, pink 10%,red 40%,yellow 50%);
+        height: 500px;
+        width: 800px;  
+       }
+       /*2. radial gradient*/
+       .rgrad{
+        background-image: radial-gradient(red,green,blue,pink);
+        height: 300px;
+        width: 500px;
+       }
+       .rgrad1{
+        background-image: radial-gradient(circle,red,green,blue,pink);
+        height: 300px;
+        width: 500px;
+       }
+       
+       /*3.conic gradient*/
+       .cgrad{
+        height: 200px;
+        width: 200px;
+        background-image: conic-gradient(red,green,blue,yellow,pink);
+       }
+       .cgrad1{
+        height: 200px;
+        width: 200px;
+        background-image: conic-gradient(red 45deg,green 210deg,yellow 90deg);
+       }
+       .cgrad2{
+        height: 200px;
+        width: 200px;
+        background-image: conic-gradient(red,green,blue,yellow,pink);
+        border-radius: 50%;
+       }
+       .cgrad3{
+        height: 200px;
+        width: 200px;
+        background-image: conic-gradient(red 0deg 90deg,green 90deg 180deg,yellow 180deg 270deg ,blue 270deg);
+        border-radius: 50%;
+    }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <img src="itachi.jpg" width="500" height="400"><br><br>
+    <img src="itachi.jpg" width="500" height="400" class="img">
+<br><br><br><br>
+<div class="grad"> linnear</div><br><br>
+<div class="grad1"> linnear</div><br><br>
+<div class="grad2"> linnear</div><br><br>
+
+<div class="ang"> angle</div><br><br>
+<div class="rgrad"> radial gradient</div><br><br>
+<div class="rgrad1"> radial gradient with round shap</div><br><br>
+
+<div class="cgrad"> conic gradient </div><br><br>
+<div class="cgrad1"> conic gradient </div><br><br>
+<div class="cgrad2"> conic gradient </div><br><br>
+<div class="cgrad3"> conic gradient </div><br><br>
+
+    
+</body>
+</html>

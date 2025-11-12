@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>     /*   <!-- order aavo j revo joi , pela char mate , nakar kalar alag alag nai dekhade --> */
+        a:link{
+            color: blue;
+        }
+        a:visited{
+            color: purple;
+        }
+        a:hover{
+            color: yellow;
+        }
+        a:active{
+            color: pink;
+        }
+
+        input:focus{
+            background-color: lightgreen;
+            border: 2px solid green;
+            outline: none;
+        }
+
+        ul li:nth-child(2){
+            color: green;
+            font-weight: lighter;
+        }
+
+        ol li:not(.special){
+            font-size: 100px;
+            background-color: yellow;
+            font-weight: bold;
+        }
+        
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="https://127.0.0.1:3000/c14.html?serverWindowId=cbcb8aaa-ca8f-4bb1-9f0f-46f3641b89f8" target="_blank">this is link</a>
+<br>
+    <input type="text" placeholder="click to focus">
+<br>
+ 
+ <ul >
+    <li>first</li>
+    <li>second</li>
+    <li>third</li>
+ </ul>
+ <br> 
+ <ol >
+    <li>first</li>
+    <li>second</li>
+    <li class="special">third</li>
+ </ol>
+</body>
+</html>

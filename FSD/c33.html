@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+         /*crearte a css p that demonstrat yhe use of multiple transiotin on a sngle element when
+        the user hovers over the dev it should 1.increase in size ,2. change background color, 
+        3. rotate 360degrees ,4.becomes circuler, 5. all width smooth timing delay and diffrent 
+        transition duration*/
+        img{
+            height: 100px;
+            width: 100px;
+            background-color: lightblue;
+            transition-property: width,height,background-color,transform,border-radius;
+            transition-duration: 3s,4s,5s,6s,7s;
+            transition-delay: 1s;
+            transition-timing-function: ease-in-out;/*Q. ma smooth lakhyu hoy tyare aa lakhava ma aaav che*/
+
+        }
+        img:hover{
+            background-color: blue;
+            height: 200px;
+            width: 200px;
+            transform: rotate(360deg);
+            border-radius: 50%;
+        
+}
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="itachi.jpg">
+</body>
+</html>

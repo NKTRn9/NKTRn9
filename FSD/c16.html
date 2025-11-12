@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+      input:hover{
+        color: blueviolet;
+      } 
+      button:active{
+        color: purple;
+      }
+      input[type="text"]:focus{
+        background-color: brown;
+      }
+      input:checked + label{
+        color: green;
+        font-weight: bold;
+      }
+      ul li:nth-child(3){
+        color: red;
+        font-weight: bold;
+      }
+.deleted{
+    color: yellow;
+    background-color: lightblue;
+
+}
+ul li:not(.deleted){
+    background-color: green;
+    font-style: italic;
+}
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <button>hi</button>
+   <p><input type="checkbox" id="agree" ><label>i agree to terms & condition</label>
+</p>
+<ul >
+    <li class="deleted">first</li>
+    <li>second</li>
+    <li>third</li>
+ </ul>
+</body>
+</html>

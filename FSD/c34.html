@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        /* create an intractive html from that demonstrate the use of css transition
+        to enhance user experience
+        1. the input field should smoothly changes its b.g.c. and border style when hovered
+        2. the button should smoothely chang it bg color ,textcolor,padding and border theckness when hovered*/
+        
+        .i1{
+            background-color: blueviolet;
+            color: blue;
+            border: 2px solid red;
+            transition: all 1s ease;
+        }
+        .i1:hover{
+            background-color: yellow;
+            color: red;
+            border: 5px dotted green;
+        }
+        .b1{
+            color: aqua;
+            background-color: chocolate;
+            border: 2px double burlywood;
+            padding: 20px;
+            transition: all 2s ease;
+        }
+        .b1:hover{
+            color: green;
+            background-color: lightgreen;
+            border: 4px double brown ;
+            padding: 25px;
+        }
+
+
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form >
+        <input type="text" placeholder="enter name: "class="i1"><br>
+        <button class="b1">submit</button>
+        
+    </form>
+    
+</body>
+</html>
