@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>let na program</title>
+    <script language="javascript" type="text/javascript">
+        //Example:-1
+        let a=10
+        function f(){
+            let b=9;
+            console.log(b);
+            console.log(a);
+        }
+        f();
+        //console.log(b)  error aavase reffrenceError
+
+        //Example:-2
+        function bc(){
+            let b=5;
+            if(b>4){
+                let a1=1;
+                console.log(a1);
+            }
+            //console.log(a1);   refrenceError a1 is not defind
+        }  
+        bc();
+
+        //Example:-3
+        let a2=10;
+        //let a2=20;  SyntaxError: Identifier 'a2' has already been declared (at let_programm.html:31:13)
+        //upar lakhyu tene redeclaration kahevay je let ma allowed nathi
+        a2=5  //aane update karyu kahevay je let ma allowed che
+        console.log(a2)
+
+        //Example:-4
+        let a3=10
+        function f0(){
+            let a3=9;
+            console.log(a3)
+        }
+        f0()
+        console.log(a3)
+
+        //Example:-5
+        console.log(a4)  //ReferenceError: Cannot access 'a4' before initialization   aa let mate che var ma alag error aavatiti
+        let a4=10;
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

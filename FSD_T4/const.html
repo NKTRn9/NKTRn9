@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>const</title>
+    <script language="javascript" type="text/javascript">
+                //Example:-1
+                const a=10
+                function f(){
+                   // a=9  const ne change na kari sakay karyu to (TypeError: Assignment to constant variable.
+                    //at f (const.html:11:22)at const.html:14:17Understand this error) aavi error aavaase
+                    console.log(a)
+                }
+                f()
+
+                //Example:-2
+                const x=10
+                // const x=20  error aavase( Uncaught SyntaxError: Identifier 'x' has already been declared (at const.html:19:23)Understand this error)
+                //x=5    const ma update pan na thay kariae to type error aapase.
+
+                //Example:-3
+              //   const a1=10   //Uncaught TypeError: Assignment to constant variable.
+                //at const.html:20:18 
+                function f1(){
+                   const a1=9   
+                   console.log(a1)
+                }
+                f1()
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

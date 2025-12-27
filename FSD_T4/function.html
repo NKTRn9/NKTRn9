@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script>
+            
+
+        function info(first,last){
+            var full=first+" "+last;
+            return full;
+        }
+        function hello(){
+            var result=info("rahul","prajapati");
+            document.write(result);
+        }
+
+        // ES6 Function
+        // functionname=(para1,para2,...,paran)
+
+        //1.
+        const add= (a,b) => a+b
+        console.log(add(2,3))
+        //2.
+        const sayhi=() =>"hello";
+        console.log(sayhi());
+        //3.
+        const multiply=(a,b)=>{
+            const re=a*b;
+            return re;
+        }
+        console.log(multiply(4,2));
+
+
+        //template Literals.
+        // normal:
+           //let name="abc";
+           //let text="hello"+name+"!";
+           document.write(text)
+        //template literals:
+           let  name="abc";
+           let text=`hello${name}!`;
+           document.write(text)
+
+        
+
+    </script>
+    </head>
+    <body>
+        <input type="button" onclick="hello()" value="info">
+
+    </body>
+</html>

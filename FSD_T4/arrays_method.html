@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta ns`ame="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //3. niche nu upar che
+        (function(){
+        document.write("this will run imediaty<br>");
+       })();
+
+
+
+        //1.push() ,2.pop(), 3.map(), 4.filter(), 5.forEach(), 6.includes(), 7.find()
+        //1.push()
+          //array.push(item)
+          let fruits=["apple","banana"]
+          fruits.push("orange");
+          console.log(fruits);
+        //2.pop()
+          let num=[10,20,30]
+          let remove =num.pop()
+          console.log(num);
+          console.log(remove);
+        //3.map()
+          let nums=[1,2,3,4]
+          let squares=nums.map(num=>num*num);
+          console.log(squares);
+        //4.filter()
+          let age=[10,12,18,20];
+          results=age.filter(ages=>ages>=18)
+          console.log(results);
+        //5.forEach()
+          let names=['a','b','c'];
+          names.forEach(name=>{
+            console.log("hello"+name);
+          })  
+        //6.includes()
+          let colores=["red","green"];
+          console.log(colores.includes("yellow"));  
+        //7.find()
+          let users=[{id:1,name:"ab"},{id:2,name:"pq"}];
+          let user=users.find(u=>u.id===2);
+          console.log(user); 
+          
+          
+        //++ and -- na example:
+        let a=5;
+        let b=++a;
+        console.log(a,b);
+        
+        let p=5;
+        let r=p--;
+        console.log(p,r);
+
+        let x=3;
+        let y=x++ + ++x;
+        console.log(x,y);
+
+    //Function:
+      // syntex:
+        //function functionname(param1,param2,....,paran){
+        // function body
+        // }
+        //->reusability
+        //->function keyword
+        //-> same rules as variable for name
+        //->{}
+        //->input may take parameter and return value using return keyword
+    
+    //Function Invocation
+      //1.function triggered by event(button click).
+      //2.function called explicitlyfrom js code.
+      //3.Automatically executed(self invoking).
+      
+       //1.
+        function showmsg(){
+            alert("button clicked");
+        }
+
+        //Example:
+        function add(a,b){
+            alert(a+b);
+        }
+
+      //2.
+       function add(a,b){
+        return a+b;
+       }  
+       let results1=add(5,10);
+       document.write(results1)  //aagad 15 lakhelu vhe te aano ans che.
+
+      //Exampple
+      
+      function add(a,b){
+        return " hello"+a+b;
+       }  
+       let results2=add(" rahul","prajapati");
+       document.write(results2)
+        
+
+      //3.
+      //sauthi upar lakhelu che karan ke aaya j lakhasu to type error aape che
+       
+
+    </script>
+</head>
+<body>
+    <input type="button" value="click here" onclick="showmsg()">
+    <input type="button" value="add" onclick="add(2,3)">
+</body>
+</html>

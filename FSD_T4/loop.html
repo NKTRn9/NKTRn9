@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // for loop
+        for (let i=1;i<=5;i++){
+            console.log(i);
+        }
+
+        //while loop
+        let i1=1;
+        while (i1<=5) {
+            console.log(i1);
+            i1++;
+        }
+
+        //do while
+        let i2=6;
+        do{
+            console.log("aa do while mate nu che")
+            console.log(i2);
+            i2++;
+        }
+        while(i2<=5)
+
+        //for..of loop (arry and string mate best che)
+        flowers=["lotus","loly","rose"]
+        for (let flower of flowers){
+            console.log(flower)
+        }
+
+        //for in loop  (aa object mate best che)
+        let user={
+            name:"abc",
+            age11:21,
+            city:"delhi"
+            };
+            for (let key in user){
+                console.log(key+" "+user[key]);
+            }
+
+        //for in loop with array
+        let student=["abc","pqr","xyz"]
+        console.log("for in with arry")
+        for (let i in student){
+            console.log(i);
+            console.log(student[i]);
+        }    
+
+
+        // Q. first 5 odd number divisible by 7
+        console.log("Q no ans:-");
+        
+        //block (function) global scope
+        var x=10;
+        if(true){
+            var x=3;
+        }
+        console.log(x);
+        //block adhuru che
+        let x1=10;
+        if(true){
+            let x1=3;
+        }
+
+        //comparition kar 
+        console.log("comparitions=");
+        var i=5;
+        for(var i=0;i<2;i++){
+            console.log(i);
+        }
+        console.log(i)
+        // aana sathe
+        let i=5;
+        for(let i=0;i<2;i++){
+            console.log(i);
+        }
+        console.log(i)
+
+        //4digit nu levano enu summetion karavanu ,je male enu agin summetion karavanu , 
+        //aem karatu revanu jo last ma 1 aave to kevanu lucky nu. che
+        let num=7777
+        while(num>1){
+            let sum=0
+            while(num!=0){
+                temp=num%10
+                sum=sum+temp
+                num=Math.floor(num/10)
+            }
+            console.log(sum)
+            num=sum
+        }
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script language="javascript" type="text/javascript">
+        document.write("hello world");
+        console.log("hi!");
+
+        function abc(){
+            var x=10; //local
+            console.log(x)
+            document.writeln(x,"<br>")
+        }
+        abc();
+        var d=200  //global
+        function xyz(){
+            document.writeln(d,"<br>")
+            console.log(d)
+        }
+        xyz();
+        function tp(){
+            x=5
+            y=6
+            z=x+y
+            document.write(z,"<br>")
+        }
+        tp();
+
+        var a=10
+        function f1(){
+            var b=20
+            console.log(a,b)
+        }
+        f1();
+        console.log(a)
+
+        function f2(){
+            var f=10;
+            console.log(f);
+        }
+        f2();
+        //console.log(f);    Error aavase
+
+        //Example:-3
+        var a=10;
+        var a=8; 
+        console.log(a)  // 8 print thase
+
+        //Example:-4
+        console.log(p)
+        var p=10  //undefind lakhelu aavase  jo na lakhyu hot to p is not defind error aavet
+
+    </script>
+</head>
+<body>
+
+    
+</body>
+</html>
