@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //564.
+        function nam()
+        {
+            while(true)
+            {
+                name = prompt("Enter your name: ");
+                if(name!=null)
+                {
+                    while(true)
+                    {
+                        password = prompt("Enter password: ");
+                        if(password.length > 7)
+                        {
+                            choice = confirm("Are you sure you want to register using this username " +name +" and this password " +password +"?");
+                            if (choice)
+                            {
+                                alert("registration confirmed using this username " +name +" and this password " +password);
+                                break;
+                            }
+                            else
+                            {
+                                alert("Registration Cancelled");
+                                break;
+                            }
+                            break;
+                        }
+                    }
+                    break;
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="button" onclick="nam()" value="Click">
+    
+</body>
+</html>

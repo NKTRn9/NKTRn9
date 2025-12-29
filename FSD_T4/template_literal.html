@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // Creating html content 
+        //Noramal String
+        let html1="<div>"+"<h1>title</h1>"+"<p>text</p>"+"</div>";
+        document.write(html1);
+        //templatelitarls
+        let html2=`<div><h1>title</h1><p>text</p></div>`;
+        document.write(html2);
+
+        //1. 
+        const newfun=p =>`val=${p}`;
+        console.log(newfun(30));
+        //2.
+        const add=(j,k)=>`${j+k}`
+        console.log(`addition=${add(2,5)}`)
+        //3.
+        const add2=(j,k)=>{
+            let ans=j+k;
+            return ans;
+        }
+        console.log(`addition=${add2(10,2)}`)
+
+        //Rest parameter 
+        //function funname(...para){  // statement  }
+        //1. 
+        function fun (a,b,...c){
+            console.log(a);
+            console.log(b);
+            console.log(c);
+        }
+        fun(1,2,3,4,5);
+        //2.
+        function fun2 (...args){
+            console.log(args);  }
+        fun2(1,2,3,4,5);
+        //3.
+        function fun3 (a,b,...c){
+            console.log(`${a}${b}`);
+            console.log(c);
+            console.log(c[0]);
+            console.log(c.length);
+            console.log(c.indexOf("PQR"));
+            console.log(c.indexOf("ABC"));
+
+        }
+        fun3("ABC","XYZ","PQR","MNO","STU");
+
+        //Spread Operator
+        arr1=[10,42,35];
+        arr2=[40,56];
+        let arr_test=[arr1,arr2]
+        console.log(arr_test);
+        //
+        arr=[...arr1,...arr2];
+        console.log(arr);
+        //
+        console.log(...arr);
+        console.log(Math.min(...arr));
+        console.log(Math.min(arr));
+        console.log(`${arr.sort()}`);
+
+        //default parameter
+        console.log("default mate")
+        function multiply(a,b=2){  //(a,b=2,c) aavu na chale 
+            return a*b;    //default argument fill from rightend side only
+                }
+        let num1=multiply(5);  // aaya aek j nakhyu che mate ans ma nan aavase 
+        console.log(num1);     //jo upar biji valyu default na lidhi hoy to
+        let num2=multiply(5,8);
+        console.log(num2);                
+
+
+        // POP up Box:
+         //1.Alert box
+         //2.confirmation box
+         //3.prompt box
+           //1.alert
+           function warn(){
+            alert("this is warning masg");
+            decument.write("warning");
+           }
+           //2.confirmation box
+           function conf(){
+           res= confirm("do you want to continue?");
+            if(res==true){
+                document.write("user want to continue");
+                return true;
+            }
+            else{
+                document.write("quit");
+                return false;
+            }
+           }
+           //3.prompt
+           function pro(){
+            var res=prompt("enter your name","your name here");
+            decument.write("you enterd"+res);
+            }
+
+        //566. write a java script programme that first uses the alert box to display a welcome
+        //msg to the user. 
+        function warn1(){
+            alert("Wllcome User ");
+            let choice=confirm("do you want to continue?");
+            if (choice==true){
+                let name=prompt("enter your name=");
+                alert("hello"+name);
+            let age=prompt("enter your age");
+            if(age>=18){
+                alert("you are an adult");
+            }
+            else{
+                alert("you are minor");
+            }
+            }
+            else{
+                alert("good by");
+            }}
+
+
+    </script>
+</head>
+<body>
+    <input type="button" onclick="warn()" value="click here"/><br><br>
+    <input type="button" onclick="conf()" value="click here"/><br><br>
+    <input type="button" onclick="pro()" value="click here"/><br><br>
+last year nu= <br>
+    <input type="button" onclick="warn1()" value="click here"/><br><br>
+    
+</body>
+</html>
