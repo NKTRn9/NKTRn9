@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+</head>
+<body>
+    <p id="p1"><i>hello</i></p>
+    <p class="c1">text1</p>
+    <p class="c1">text2</p>
+    <h6 >paragraph</h6>
+    <h2>para1</h2>
+    <h2>para2</h2>
+    <p id="p" title="demo text">helloeee</p>
+    <p id="demo">ddemo1</p>
+    <p id="p11" title="xyz">hello rahul </p>
+
+
+    
+
+   
+    <script>
+        //1.document    main entry point to html web page
+        document.write("wellcome to dom");
+
+        //2. getElementById()  select one element using unique id    , aaya ment che
+        document.getElementById("p1").innerHTML="Hello world";
+
+        //3. getElementsByClassName(), aaya ments che
+        x=document.getElementsByClassName("c1");  // aa list return karase je x ma store karya
+        x[0].innerHTML="changed text";
+        for(var i=0;i<x.length;i++){
+            x[i].innerHTML="changed for all";
+        }
+
+        //4.querySelector()   ->first matching element can select accrding to 
+        //                      tag("P")&class(".c1")&id("#i1")&combination(div p)
+        document.querySelector("h6").style.color="red";
+
+        //5.querySelectorAll()  -> nodelist
+        var x1=document.querySelectorAll("h2");
+        x1[1].innerHTML="second paragraph";
+        for (let p of document.querySelectorAll("h2")){
+            p.style.color = "blue";
+            p.style.fontSize="20px";
+        }
+
+        //6.innerHTML():
+        document.getElementById("demo").innerHTML="<b>hello</b>";
+
+        //7.innerText():    
+       document.getElementById("demo").innerText="<b>hello</b>";
+
+       //8.setAttribute():       //src,href,class aa badha ne attribute kevay
+        document.getElementById("img1").setAttribute("src","img1.png");
+
+        //9.getAttribute():
+        alert(document.getElementById("p").getAttribute("title"));
+
+        //10.removeAttribute():
+        document.getElementById("p11").removeAttribute("title");
+
+        //11.styleManipulation:
+        x[0].style.backgroundColor="yellow";
+
+       
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

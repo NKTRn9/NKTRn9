@@ -1,0 +1,53 @@
+<!--write a  take one division with one tag no decoration initialy take font size as defult argument and pass backgfround color and text color while passing argument two function style should change on button click -->
+
+<!-- Write ES-6 function to be called on one button click take 1 division with same text and no decoration initially
+take font size and style as default argument and pass bg text ,color while passing
+arguments TO function should change on button click -->
+
+<!-- Event Handling:  ->mouse click  ->mouse movement  ->key press  ->form submission  ->focus or blur on input field-->
+
+<html>
+    <head>
+
+    </head>
+    <body>
+       <div id="e">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam alias accusantium rem quis possimus atque nisi nesciunt, error adipisci dignissimos nulla fugiat doloremque dicta laborum, explicabo corrupti impedit voluptas provident!</div>
+        <input type="button" value="Click Here" onclick="fun('red','yellow')">
+
+       <!--1.function call without parameter:--> <p onmousedown="down()" id="text">yyyyyyyy</p>  <!--aana upar click karava thi 
+        mouse down lakhelu aavase je niche lakhelu che-->
+        
+    <!--2.function call with this parameter:--><p onmouseup="up(this)">testtttttt</p>
+
+    <!--3. Inline js(no function call)-->
+
+    <p onmouseover="this.style.color='red';  this.innerHTML='mouse over';";>textmouse over</p>
+        <script>
+            fun=(a,b,c="50px",d="italic") =>{
+                i=document.getElementById("e")
+                i.style.color=a
+                i.style.backgroundColor=b
+                i.style.fontSize=c
+                i.style.fontStyle=d
+            }
+
+            //1.function call without parameter:
+            function down(){
+                document.getElementById("text").innerHTML="mouse down";
+            }
+
+            //2.function call with this parameter:
+            function up(x){
+                x.innerHTML="mouse up";
+
+            }
+
+            //3. Inline js(no function call)
+            // aama direct paragraph ma  lakhi sakay che
+        
+        </script>
+
+        
+
+    </body>
+</html>
