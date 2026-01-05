@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <!--ONCLICK  (buttonclick), ON MOUSE DOWN(delete press) 
+     ,on mouse up(delete relese) ,on mouse over(detect hover) ,onmouseout(remove hover) -->
+        <h2 onclick="alert(this.innerHTML)">hello their</h2>
+        <!--onmousedown  & onmouseup-->
+        <div onmousedown="mdown(this)" onmouseup="mup(this)"
+            style="background-color: lightblue;
+                   height: 70px; width: 30px; padding: 20px;">  click ha 
+        </div>
+
+<br><br>
+        <!--onmouseover  & onmouseout -->
+        <div onmouseover="mover(this)" onmouseout="mout(this)" style="background-color: yellowgreen; height: 70px;  width: 30px; padding:20px;">
+
+        </div>
+
+
+       
+
+        <script>
+    function mdown(e){
+        e.innerHTML="pressed"
+        e.style.backgroundColor="yellow";
+    }
+    function mup(e){
+        e.innerHTML="released";
+        e.style.backgroundColor="pink";
+    }
+
+    function mover(e)
+        {
+            e.innerHTML = "hovering";
+            e.style.backgroundColor="yellow";
+        }
+    function mout(e)
+        {
+            e.innerHTML = "moved";
+            e.style.backgroundColor = "pink"
+        }
+    </script>
+    </body>
+</html>

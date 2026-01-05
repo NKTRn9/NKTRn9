@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--pb -->
+    <div style="width: 500px; height: 500px; border: 2px solid black;"  onmousedown="fun(event)"></div><br><br>
+<!--PB:622-->
+    <span class="price-tag">150</span>
+<span class="price-tag">80</span>
+<span class="price-tag">220</span>
+<span class="price-tag">95</span>
+
+
+
+    <script >
+        function fun(e){
+            val=e.button;
+            switch(val){
+                case 0:alert("left click");
+                break;
+                case 1:alert("middile click");
+                break;
+                case 2:alert("right click");
+                break;
+            }
+        }
+
+        function updatePriceColors() {
+    // 1. Sabhi price-tag elements select karo
+    const priceElements = document.querySelectorAll('.price-tag');
+    
+    // 2. Har element pe loop karo
+    priceElements.forEach(element => {
+        // 3. innerText ko number mein convert karo
+        const price = parseInt(element.innerText);
+        
+        // 4. Condition check karo
+        if (price < 100) {
+            element.style.color = 'green';  // Green for < 100
+        } else {
+            element.style.color = 'red';    // Red for >= 100
+        }
+    });
+}
+
+    </script>
+    
+</body>
+</html>

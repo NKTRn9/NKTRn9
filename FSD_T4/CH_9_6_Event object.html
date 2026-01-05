@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body >  <!--onkeypress="show(event)"-->
+    <!--1. event.target  2.even,tyoe  3. event.key  4. event.preventDefault-->
+    <!--1.event.target :  identifing which element is clicked-->
+    <select onchange="show(event)">
+        <option value="option1">
+            red
+        </option>
+        <option value="option2">
+            greeen
+        </option>
+    </select><br><br>
+    <!--2. event.type  :   tell which event occured-->
+    <button onclick="check(event)">  <!--aaya onclik ni jagya ae onmouseup lakhyu hot to e print that-->
+        click here
+    </button>
+    <!--3. event.key:   key pressed by user   :   body ma lakhyu e lakhavaau pade aana mate-->
+    <!--4.   event.preventDefault: -->
+    <form onsubmit="stop(event)">
+        <input type="text">
+        <input type="submit">
+    </form>
+
+    <!--addEventListener()-->
+
+    <button id="btn">
+        click here
+    </button>
+
+
+    <script>
+        function show(e){
+            alert(e.target.value);
+        }
+
+        function check(e){
+            alert(e.type);
+        }
+
+        function keycheck(e){
+            alert("key preses" +e.key +"value is" +e.keycode);
+        }
+
+        function stop(e){
+          //  alert("form submited")
+            e.preventDefault();
+            alert("form submition stoped")
+        }
+
+
+        document.getElementById("btn")
+        .addEventListener( "click" , function(){alert("button click")} )
+    </script>
+</body>
+</html>

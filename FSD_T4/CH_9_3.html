@@ -1,0 +1,52 @@
+<!-- Write js to handle following mouse events:
+ 1. if mouse is hovered it should turn yellow & if it goes out it should turn blue
+ 2. if "find time" button is clicked it should display date & time information 
+ 3. if button named "red" is clicked backround-color should turn red. same for green button -->
+
+
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+ </head>
+ <body id="bd">
+     <div onmouseover="mover(this)" onmouseout="mout(this)" style="background-color: lightblue; height: 70px; width: 70px; padding: 20px; ">
+         Hello
+     </div>
+     <script>
+         function mover(e) 
+         {
+             e.style.backgroundColor="yellow";
+         }
+         function mout(e) 
+         {
+             e.style.backgroundColor="blue";
+         }
+ 
+         function fun3(id) 
+         {
+             d = new Date();
+             document.getElementById("demo").innerHTML = d;
+         }
+ 
+         function fun4() 
+         {
+             id = document.getElementById("bd");
+             id.style.backgroundColor="red";
+         }
+         function fun5() 
+         {
+             id = document.getElementById("bd");
+             id.style.backgroundColor="green";
+         }
+     </script> <hr>
+ 
+     <input type="submit" value="Find Time" onclick="fun3(this)"/>
+     <p id="demo"></p>
+     <input type="submit" value="red" onclick="fun4()">
+     <input type="submit" value="green" onclick="fun5()">
+ </body>
+ </html>

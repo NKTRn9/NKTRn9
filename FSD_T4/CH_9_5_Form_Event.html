@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--Form Event:
+        1.onfocus (when field get focus)
+        2.oninput (immediatly when value changes)
+        3.onblur  (when field loses focus)
+        4.onchange(when value changes and focus lost)
+        5.onsubmit(when form is sunmitted) -->
+
+        <!--  Question
+        w. an html and js to perform task 
+        1.add 3 text input field
+        2.in the first field convert the enterd text into upper case when the value of the feed 
+        is change using the onchange event.
+        3.in the second field change the backgroudcolor to yellow when the field get focus 
+        using on focus event( change the text  color to bluewhile typing using the oninput event )
+        4. in 3rd field convert the text into lower case when the field lose it focus using onblur
+        event-->
+</head>
+<body>
+    <form action="#" onsubmit="myfunction()">
+        Enter Name:
+        <input type="text" id="fname"><br>
+        <input type="submit">
+    </form>
+    <br><br><br>
+
+    <!--onchange-->
+    <input type="text" id ="fname" value="HELlo" onchange="Uppercase()">
+    <!--onfocus & oninput-->
+    <input type="text" value="heeeelo" onfocus="this.style.backgroundColor='yellow'" oninput="inputtxt(this)">
+    <!--onblur-->
+    <input type="text" value="HELLO" id="lname" onblur="Lowercase()">
+
+    <script>
+        function myfunction(){
+            a=document.getElementById("fname").value;
+            alert("wellcome"+a);
+        }
+
+        <!--q. mate -->
+        function Uppercase(){
+            var a=document.getElementById("fname");
+            a.value=a.value.toUpperCase();
+        }
+        function Lowercase(){
+            var b=document.getElementById("lname");
+            b.value=b.value.toLowerCase();
+
+        }
+        function inputtext(x){
+            x.style.color="blue";
+        }
+    </script>
+    
+</body>
+</html>

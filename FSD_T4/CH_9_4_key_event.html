@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--write js to handle  following events 
+    1> bgcolor should chAnge to purpl after realising the process key
+    2> give key code for the key press 
+    3> script should give a msg vowel is pressed on presing vowel key-->
+    
+    <script>
+
+        function fun1(id) 
+        {
+            id.bgColor="purple";
+        }
+
+        function fun2(e) 
+        {
+            c=e.key;
+
+            if (c=='a' || c=='e' || c=='i' || c=='o' || c=='u' || c=='A' || c=='E' || c=='I' || c=='O' || c=='U') 
+            {
+                console.log("vowel is entered " + e.keyCode + " " + e.key);
+            }
+            else
+            {
+                console.log(e.keyCode + " " + e.key);
+            }
+        }
+
+    </script>
+</head>
+<body onkeypress="fun2(event)" onkeyup="fun1(this)"></body>
+</html>

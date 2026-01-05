@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 1)))way to access form elements:  
+    1. using document.forms : obj= document.forms["form_name"]["element_name"].value;
+    2. using form and element name directly:   obj=document.form_name.element_name.value;
+    3. using getelementById :  obj=document.getElementById("id").value;
+       -->
+
+    <form name="f1" onsubmit="fun()">  <!-- aama "return fun() "pan lakhi sakay-->
+        <input type="text " name="t1" id="i1" /><br>
+        <input type="submit" >
+
+    </form><br><br>
+
+    <!-- 2))) to find form leangth:-->
+    <form name="f2" onsubmit="fun1()">
+        Name: <input type="text" name="t2" id="i2"><br>
+        Password: <input type="password"><br>
+        <textarea >comment </textarea><br>
+        <input type="submit">
+        <input type="reset">
+    </form><br><br><br>
+
+    <!-- Example: 
+    alert with pop up with text eneter somthing if input is empty on clicking submit
+    other wise print entered value. -->
+    <form name="f3" onsubmit="fun2()">
+        Nmae:<input type="text" name="t3" id="i3">
+        <input type="submit">
+    </form><br><br>
+
+    <!-- 3))) Regular Expression (regex) :  
+     Syntex: /pattern/modifier(s)        //test()ni requirement thse-->
+      <!--Ex1 String must contain 'abc' anyware in hole string -->
+      name: <input type="text" id="tp"/><br>
+      submit: <input type="submit" onclick="fun_pattern()">
+      
+
+
+
+
+    <script>
+        function fun(){
+            //var obj1=document.forms["f1"]["t1"].value;  //peli method thi access karyu 
+            //alert(obj1);
+
+           // obj2=document.f1.t1.value;
+           //alert(obj2);
+
+          // obj3=document.getElementById("i1").value;
+           //alert(obj3);    
+        }
+
+        function fun1(){
+            //var obj = document.forms["f2"]["t2"].value;
+            //var obj = document.f2.t2.value;
+            var obj = document.getElementById("i2").value;
+            alert(obj.length);
+        }
+
+        function fun2(){
+            var val = document.getElementById("i3").value;
+            if (val==""){
+                alert("enter somthing.");
+                return false;
+            }
+            alert ( val);   
+        }
+
+        function fun_pattern(){
+            pat= /abc/;
+            u=document.getElementById("tp").value;
+            if(pat.test(u)){
+                alert("perfect");
+            }
+            else{
+                alert("string must contain 'abc' ");
+            }
+        }
+    </script>   
+    
+</body>
+</html>
